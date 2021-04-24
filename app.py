@@ -317,5 +317,6 @@ api.add_resource(TracksId, "/tracks/<track_id>")
 api.add_resource(ReproducirTrack, "/tracks/<track_id>/play")
 api.add_resource(ReproducirAlbum, "/albums/<album_id>/tracks/play")
 api.add_resource(ReproducirArtist, "/artists/<artist_id>/albums/play")
+
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
