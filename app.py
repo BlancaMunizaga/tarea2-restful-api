@@ -10,7 +10,7 @@ app.config['SECRET_KEY'] = 'secret'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
 db = SQLAlchemy(app)
 
-BASE = "https://git.heroku.com/tarea2-restful-api.git"
+BASE = "https://tarea2-restful-api.herokuapp.com"
 
 
 class TrackModel(db.Model):
