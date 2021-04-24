@@ -6,8 +6,10 @@ import json
 
 app = Flask(__name__)
 api = Api(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
+app.config['SECRET_KEY'] = 'secret'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
 db = SQLAlchemy(app)
+
 BASE = "https://git.heroku.com/tarea2-restful-api.git"
 
 
@@ -60,7 +62,6 @@ class ArtistModel(db.Model):
 
     def __repr__(self):
         return f"Artist(name = {name}, age = {age})"
-
 
 artist_post_args = reqparse.RequestParser()
 artist_post_args.add_argument(
